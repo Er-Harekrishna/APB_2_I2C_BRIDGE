@@ -1,0 +1,14 @@
+STATUS:
+    
+  APB_I2C_BRIDGE:  
+        Virtual sequence and sequencer is completed.
+        Scoreboard is completed and according to the expectation PASS and FAIL are coming.
+        5 test cases are completed.
+        Implemented 6 assertions.
+		synchronization testcase in progress as well call back testcase.
+		
+  DESIGN_ASSERTION(assigned by Maulik sir):
+        Design is ready by my side.
+		Assertion discussed and implemented with team.
+		
+	

@@ -1,0 +1,23 @@
+QuestaSim-64 vcover 10.4e Coverage Utility 2016.04 Apr  9 2016
+Start time: 10:28:46 on Sep 01,2023
+vcover merge APB2I2C_regression.ucdb sanity_test.ucdb same_data_case_wr_rd_test.ucdb b2b_wr_apb_rd_i2c.ucdb wr_more_than_depth_case_wr_rd_test.ucdb semaphore_case_wr_rd_test.ucdb apb_psel_high_all_transaction_case_test.ucdb apb_psel_toggle_all_transaction_case_test.ucdb apb_wr_i2c_rd_till_depth_test.ucdb apb_read_i2c_read_case_wr_rd_test.ucdb apb_only_read_test.ucdb apb_wr_i2c_wr_test.ucdb reset_on_the_fly_test.ucdb apb_pwdata_change_cb_test.ucdb i2c_stop_cond_cb_test.ucdb apb_wr_rst_i2c_rd_test.ucdb b2b_rw_reset_test.ucdb 
+Merging file sanity_test.ucdb
+Merging file same_data_case_wr_rd_test.ucdb
+Merging file b2b_wr_apb_rd_i2c.ucdb
+Merging file wr_more_than_depth_case_wr_rd_test.ucdb
+Merging file semaphore_case_wr_rd_test.ucdb
+Merging file apb_psel_high_all_transaction_case_test.ucdb
+Merging file apb_psel_toggle_all_transaction_case_test.ucdb
+Merging file apb_wr_i2c_rd_till_depth_test.ucdb
+Merging file apb_read_i2c_read_case_wr_rd_test.ucdb
+Merging file apb_only_read_test.ucdb
+Merging file apb_wr_i2c_wr_test.ucdb
+Merging file reset_on_the_fly_test.ucdb
+Merging file apb_pwdata_change_cb_test.ucdb
+Merging file i2c_stop_cond_cb_test.ucdb
+Merging file apb_wr_rst_i2c_rd_test.ucdb
+Merging file b2b_rw_reset_test.ucdb
+Writing merged result to APB2I2C_regression.ucdb
+
+End time: 10:28:46 on Sep 01,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

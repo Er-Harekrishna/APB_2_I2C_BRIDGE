@@ -1,0 +1,54 @@
+# Current time Fri Aug 18 10:51:29 2023
+# Program = vsim
+# Id = "10.4e"
+# Version = "2016.04"
+# Date = "Apr  9 2016"
+# Platform = win64
+# Signature = 51a056345942860ec1e5920e3c0e5733
+# 0    0x000000001007825b: 'Tcl_DeleteChannelHandler + 0xdb' in 'c:\questasim64_10.4e\win64\tcl85.dll'
+# 1    0x0000000140f28c23: '<unknown (@0x140f28c23)>'
+# 2    0x0000000140f276d4: '<unknown (@0x140f276d4)>'
+# 3    0x00000001403f7772: '<unknown (@0x1403f7772)>'
+# 4    0x00000001403f964b: '<unknown (@0x1403f964b)>'
+# 5    0x00000001403f974c: '<unknown (@0x1403f974c)>'
+# --> START OF USERCODE
+# 6    0x0000000060ff1b06: 'get_pgmptr + 0x1d2' in 'c:\windows\winsxs\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.9625_none_08e1c10da83fbc83\msvcr90.dll'
+# <-- END OF USERCODE
+# 7    0x00000001403f79d9: '<unknown (@0x1403f79d9)>'
+# 8    0x00000001411ac9cc: '<unknown (@0x1411ac9cc)>'
+# --> START OF USERCODE
+# 9    0x0000000061045f3c: 'raise + 0x230' in 'c:\windows\winsxs\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.9625_none_08e1c10da83fbc83\msvcr90.dll'
+# 10   0x000000006104b841: 'abort + 0x29' in 'c:\windows\winsxs\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.9625_none_08e1c10da83fbc83\msvcr90.dll'
+# End of Stack Trace
+
+
+# Current time Tue Aug 22 14:21:45 2023
+# Program = vsim
+# Id = "10.4e"
+# Version = "2016.04"
+# Date = "Apr  9 2016"
+# Platform = win64
+# Signature = 51a056345942860ec1e5920e3c0e5733
+# End of Stack Trace
+
+
+# Current time Wed Aug 23 14:50:55 2023
+# Program = vsim
+# Id = "10.4e"
+# Version = "2016.04"
+# Date = "Apr  9 2016"
+# Platform = win64
+# Signature = 51a056345942860ec1e5920e3c0e5733
+# End of Stack Trace
+
+
+# Current time Mon Aug 28 15:44:46 2023
+# Program = vsim
+# Id = "10.4e"
+# Version = "2016.04"
+# Date = "Apr  9 2016"
+# Platform = win64
+# Signature = 51a056345942860ec1e5920e3c0e5733
+# End of Stack Trace
+
+

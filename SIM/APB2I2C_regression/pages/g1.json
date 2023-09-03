@@ -1,0 +1,22 @@
+var g_data = {
+g1516948283_1073322992_0:[{dummy:0},
+{name:'i2c_bean_cg',f:1,type:1,id:2301,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G']},
+{name:'\\/pkg::apb_2_i2c_sb::i2c_bean_cg ',f:1,type:2,id:2305,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],cvg:'i2c_bean_cg'},
+{name:'apb_bean_cg',f:1,type:1,id:2309,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G']},
+{name:'\\/pkg::apb_2_i2c_sb::apb_bean_cg ',f:1,type:2,id:2313,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],cvg:'apb_bean_cg'}],
+g2199902893_1174782808_0:[{dummy:0},
+{name:'apb_bean_cg',f:1,type:1,id:2343,tb:'5',h:'5',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G']},
+{name:'\\/pkg::apb_2_i2c_coverage::apb_bean_cg ',f:1,type:2,id:2349,tb:'5',h:'5',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],cvg:'apb_bean_cg'},
+{name:'i2c_bean_cg',f:1,type:1,id:2355,tb:'2',h:'2',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']]}],
+g1543916528_1583240612_0:[{dummy:0},
+{name:'i2c_bean_cg',f:1,type:1,id:3638,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G']},
+{name:'\\/pkg::apb_2_i2c_sb::i2c_bean_cg ',f:1,type:2,id:3642,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],cvg:'i2c_bean_cg'},
+{name:'apb_bean_cg',f:1,type:1,id:3646,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G']},
+{name:'\\/pkg::apb_2_i2c_sb::apb_bean_cg ',f:1,type:2,id:3650,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],cvg:'apb_bean_cg'}],
+g0713844932_3393398607_0:[{dummy:0},
+{name:'apb_bean_cg',f:1,type:1,id:3680,tb:'5',h:'5',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G']},
+{name:'\\/pkg::apb_2_i2c_coverage::apb_bean_cg ',f:1,type:2,id:3686,tb:'5',h:'5',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],cvg:'apb_bean_cg'},
+{name:'i2c_bean_cg',f:1,type:1,id:3692,tb:'2',h:'2',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']]}],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

@@ -1,0 +1,530 @@
+# vsim -coverage -vopt apb_to_i2c_top -c -do "coverage save -onexit -directive -cvg -codeall b2b_rw_reset_test.ucdb; run -all; exit" "+UVM_TESTNAME=b2b_rw_reset_test" 
+# Start time: 10:28:42 on Sep 01,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# //  Questa Sim-64
+# //  Version 10.4e win64 Apr  9 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.pkg(fast)
+# Loading work.apb_to_i2c_top(fast)
+# Loading work.apb_inf(fast__1)
+# Loading work.i2c_inf(fast__1)
+# Loading work.dut_top_sv_unit(fast)
+# Loading work.apb_i2c_cnv(fast)
+# Loading work.apb_slave(fast)
+# Loading work.i2c_slave(fast)
+# Loading work.Mux_2_1(fast)
+# Loading work.Demux_1_2(fast)
+# Loading work.apb_i2c_assertion(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.apb_inf(fast)
+# Loading work.i2c_inf(fast)
+# ** Warning: (vsim-8637) ../ENV/i2c_stop_condition_cb.sv(25): A modport ('I2C_STR_STP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_pwdata_change_cb.sv(23): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_pwdata_change_cb.sv(27): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(34): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(51): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(50): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(34): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_pwdata_change_cb.sv(27): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_pwdata_change_cb.sv(23): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/i2c_stop_condition_cb.sv(25): A modport ('I2C_STR_STP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(51): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(50): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(47): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_monitor.sv(34): A modport ('APB_MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_pwdata_change_cb.sv(27): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_pwdata_change_cb.sv(23): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/i2c_stop_condition_cb.sv(25): A modport ('I2C_STR_STP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg File: ../TEST/pkg.sv
+# ** Warning: (vsim-3015) ../TOP/apb_to_i2c_top.sv(41): [PCDPC] - Port size (1) does not match connection size (8) for port 'paddr'. The port definition is at: ../APB_I2C_ASSERTION/apb_i2c_assertion.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /apb_to_i2c_top/DUT/AST File: ../APB_I2C_ASSERTION/apb_i2c_assertion.sv
+# ** Warning: (vsim-3015) ../TOP/apb_to_i2c_top.sv(41): [PCDPC] - Port size (1) does not match connection size (8) for port 'pwdata_in'. The port definition is at: ../APB_I2C_ASSERTION/apb_i2c_assertion.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /apb_to_i2c_top/DUT/AST File: ../APB_I2C_ASSERTION/apb_i2c_assertion.sv
+# ** Warning: (vsim-3015) ../TOP/apb_to_i2c_top.sv(41): [PCDPC] - Port size (1) does not match connection size (8) for port 'prdata_out'. The port definition is at: ../APB_I2C_ASSERTION/apb_i2c_assertion.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /apb_to_i2c_top/DUT/AST File: ../APB_I2C_ASSERTION/apb_i2c_assertion.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(39): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(53): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(59): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(60): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(63): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(66): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(70): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(87): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(115): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(116): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(117): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(118): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/apb_driver.sv(119): A modport ('APB_WDR_MP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::apb_driver File: ../TEST/pkg.sv
+# ** Warning: (vsim-8637) ../ENV/i2c_driver.sv(73): A modport ('I2C_STR_STP') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /pkg::i2c_driver File: ../TEST/pkg.sv
+# Loading C:/questasim64_10.4e/uvm-1.1d\win64\uvm_dpi.dll
+# coverage save -onexit -directive -cvg -codeall b2b_rw_reset_test.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test b2b_rw_reset_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                       Type                          Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top               b2b_rw_reset_test             -     @500 
+#   env_h                    apb_i2c_env                   -     @516 
+#     apb_agnt_h             apb_agent                     -     @525 
+#       drv_h                apb_driver                    -     @804 
+#         rsp_port           uvm_analysis_port             -     @821 
+#         seq_item_port      uvm_seq_item_pull_port        -     @812 
+#       mon_h                apb_monitor                   -     @830 
+#         write_a_port       uvm_analysis_port             -     @838 
+#       seqr_h               apb_seqr                      -     @681 
+#         rsp_export         uvm_analysis_export           -     @689 
+#         seq_item_export    uvm_seq_item_pull_imp         -     @795 
+#         arbitration_queue  array                         0     -    
+#         lock_queue         array                         0     -    
+#         num_last_reqs      integral                      32    'd1  
+#         num_last_rsps      integral                      32    'd1  
+#     apb_sub_h              apb_2_i2c_coverage            -     @549 
+#       APB_anl_imp          uvm_analysis_imp_apb_imp_sub  -     @853 
+#       I2C_anl_imp          uvm_analysis_imp_i2c_imp_sub  -     @862 
+#     i2c_agnt_h             i2c_agent                     -     @533 
+#       drv_h                i2c_driver                    -     @995 
+#         rsp_port           uvm_analysis_port             -     @1012
+#         seq_item_port      uvm_seq_item_pull_port        -     @1003
+#       mon_h                i2c_monitor                   -     @1021
+#         write_a_port       uvm_analysis_port             -     @1029
+#       seqr_h               i2c_seqr                      -     @872 
+#         rsp_export         uvm_analysis_export           -     @880 
+#         seq_item_export    uvm_seq_item_pull_imp         -     @986 
+#         arbitration_queue  array                         0     -    
+#         lock_queue         array                         0     -    
+#         num_last_reqs      integral                      32    'd1  
+#         num_last_rsps      integral                      32    'd1  
+#     sb_h                   apb_2_i2c_sb                  -     @541 
+#       APB_anl_imp          uvm_analysis_imp_apb_imp      -     @1044
+#       I2C_anl_imp          uvm_analysis_imp_i2c_imp      -     @1053
+#     vseqr_h                apb_2_i2c_virtual_seqr        -     @557 
+#       rsp_export           uvm_analysis_export           -     @565 
+#       seq_item_export      uvm_seq_item_pull_imp         -     @671 
+#       arbitration_queue    array                         0     -    
+#       lock_queue           array                         0     -    
+#       num_last_reqs        integral                      32    'd1  
+#       num_last_rsps        integral                      32    'd1  
+# --------------------------------------------------------------------
+# 
+# UVM_INFO ../ENV/apb_monitor.sv(32) @ 0: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] in run phase of apb_monitor
+# UVM_INFO ../ENV/apb_driver.sv(33) @ 0: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver
+# UVM_INFO ../TEST/B2B_RW_RESET/b2b_rw_reset_write_sequence.sv(17) @ 0: uvm_test_top.env_h.apb_agnt_h.seqr_h@@apb_wr_seqs [b2b_rw_reset_write_sequence] Base seq: Inside Body
+# UVM_INFO ../ENV/apb_driver.sv(37) @ 1000000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver after presetn
+# UVM_INFO ../ENV/apb_monitor.sv(35) @ 1000000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] in run phase of apb_monitor after wait for reset
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 1125000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1075                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'hf                                             
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    1125000                                         
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 3875000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=f
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 3875000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- f
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 3875000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 4125000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1156                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'h18                                            
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    4125000                                         
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 5375000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=18
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 5375000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- 18
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 5375000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 5625000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1164                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'h0                                             
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    5625000                                         
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 6125000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=0
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 6125000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- 0
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 6125000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 6375000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1172                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'h3d                                            
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    6375000                                         
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 8375000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=3d
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 8375000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- 3d
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 8375000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 8625000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1180                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'hd                                             
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    8625000                                         
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 9125000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=d
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 9125000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- d
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 9125000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 9375000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1188                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'hf0                                            
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    9375000                                         
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 9875000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=f0
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 9875000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- f0
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 9875000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 10125000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1196                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'h79                                            
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    10125000                                        
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 10875000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=79
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 10875000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- 79
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 10875000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 11125000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# ------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                           
+# ------------------------------------------------------------------------------------------------
+# trans_h                        apb_trans  -     @1204                                           
+#   psel_toggle                  integral   1     'h1                                             
+#   pwrite                       integral   1     'h1                                             
+#   pwdata_in                    integral   8     'hd1                                            
+#   paddr                        integral   8     'hff                                            
+#   begin_time                   time       64    11125000                                        
+#   depth                        int        32    'd2                                             
+#   parent sequence (name)       string     11    apb_wr_seqs                                     
+#   parent sequence (full name)  string     48    uvm_test_top.env_h.apb_agnt_h.seqr_h.apb_wr_seqs
+#   sequencer                    string     36    uvm_test_top.env_h.apb_agnt_h.seqr_h            
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../ENV/apb_monitor.sv(54) @ 13125000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] [FROM RD_MON] write=1 paddr=ff   pwdata_in=d1
+# UVM_INFO ../ENV/scoreboard.sv(73) @ 13125000: uvm_test_top.env_h.sb_h [sb_h] ------------->data in internal memory  , act_data :- d1
+# UVM_INFO ../ENV/apb_monitor.sv(56) @ 13125000: uvm_test_top.env_h.apb_agnt_h.mon_h [apb_monitor] data send from monitor
+# UVM_INFO ../TEST/B2B_RW_RESET/b2b_rw_reset_read_sequence.sv(19) @ 13125000: uvm_test_top.env_h.i2c_agnt_h.seqr_h@@i2c_rd_seqs [b2b_rw_reset_read_sequence] Base seq: Inside Body
+# UVM_INFO ../ENV/apb_driver.sv(40) @ 13375000: uvm_test_top.env_h.apb_agnt_h.drv_h [apb_driver] inside runphase of apb driver forever loop
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 95000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave f
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 185000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 0f 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 190000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(97) @ 195000000: uvm_test_top.env_h.sb_h [sb_h] ======   flag =1 ============
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 195000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- f , expected_data :- f,rd_ptr:-0
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 195000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 0f 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 285000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 18
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 375000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 18 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 380000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 385000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 18 , expected_data :- 18,rd_ptr:-1
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 385000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 18 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 475000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 565000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 570000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 575000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-2
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 575000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 665000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 3d
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 755000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 3d 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 760000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 765000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 3d , expected_data :- 3d,rd_ptr:-3
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 765000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 3d 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 855000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave d
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 945000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 0d 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 950000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 955000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- d , expected_data :- d,rd_ptr:-4
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 955000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 0d 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 1045000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave f0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 1135000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex f0 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 1140000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 1145000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- f0 , expected_data :- f0,rd_ptr:-5
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 1145000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex f0 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 1235000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 79
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 1325000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 79 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 1330000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 1335000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 79 , expected_data :- 79,rd_ptr:-6
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 1335000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 79 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 1425000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave d1
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 1515000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex d1 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 1520000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 1525000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- d1 , expected_data :- d1,rd_ptr:-7
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 1525000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex d1 
+# UVM_INFO ../ENV/scoreboard.sv(113) @ 1526000000: uvm_test_top.env_h.sb_h [sb_h] -------------------------------------in run phase of scoreboard
+# UVM_INFO ../ENV/scoreboard.sv(120) @ 1526000000: uvm_test_top.env_h.sb_h [sb_h] ===> mem[0] = 00
+# UVM_INFO ../TEST/B2B_RW_RESET/b2b_rw_reset_read_sequence.sv(19) @ 1526400000: uvm_test_top.env_h.i2c_agnt_h.seqr_h@@i2c_rd_seqs [b2b_rw_reset_read_sequence] Base seq: Inside Body
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 1615000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 1705000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 1710000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 1715000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-0
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 1715000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 1805000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 1895000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 1900000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 1905000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-1
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 1905000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 1995000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 2085000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 2090000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 2095000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-2
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 2095000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 2185000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 2275000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 2280000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 2285000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-3
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 2285000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 2375000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 2465000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 2470000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 2475000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-4
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 2475000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 2565000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 2655000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 2660000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 2665000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-5
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 2665000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 2755000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 2845000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 2850000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 2855000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-6
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 2855000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# -------------------------------------- start in dut----------------------------------------------
+# recieved byte cb 
+# UVM_INFO ../ENV/i2c_monitor.sv(51) @ 2945000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_addr] sample address in dec 101 
+# transmitted data from i2c slave 0
+# UVM_INFO ../ENV/i2c_monitor.sv(69) @ 3035000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data in hex 00 
+# UVM_INFO ../ENV/i2c_driver.sv(100) @ 3040000000: uvm_test_top.env_h.i2c_agnt_h.drv_h [drv_h] -----driving ACK-----
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 3045000000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# -------------------------------------- stop in dut----------------------------------------------
+# UVM_INFO ../ENV/scoreboard.sv(102) @ 3045000000: uvm_test_top.env_h.sb_h [sb_h] !!!!PASSSSSS!!!!  , actual_data :- 0 , expected_data :- 0,rd_ptr:-7
+# UVM_INFO ../ENV/i2c_monitor.sv(79) @ 3045000000: uvm_test_top.env_h.i2c_agnt_h.mon_h [mon_data] sample read data afte stop #########in hex 00 
+# ///////////////////////////////////////////////////////////////
+# ////           *******  ******  ****** ******    |||       ////
+# ////           *******  ******  ****** ******    |||       ////
+# ////           **   **  **  **  **     **        |||       ////
+# ////           **   **  **  **  **     **        |||       ////
+# ////           *******  ******  *****  ******    |||       ////
+# ////           *******  ******  *****  ******    |||       ////
+# ////           **       **  **     **      **    |||       ////
+# ////           **       **  **     **      **    |||       ////
+# ////           **       **  **  *****  ******    |||       ////
+# ////           **       **  **  *****  ******    ...       ////
+# ///////////////////////////////////////////////////////////////
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  128
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [apb_driver]    11
+# [apb_monitor]    18
+# [b2b_rw_reset_read_sequence]     2
+# [b2b_rw_reset_write_sequence]     1
+# [drv_h]    16
+# [mon_addr]    16
+# [mon_data]    32
+# [sb_h]    27
+# ** Note: $finish    : C:/questasim64_10.4e/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3045 us  Iteration: 63  Instance: /apb_to_i2c_top
+# Saving coverage database on exit...
+# End time: 10:28:46 on Sep 01,2023, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 42

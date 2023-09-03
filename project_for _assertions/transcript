@@ -1,0 +1,350 @@
+# 
+# 
+# 
+# 
+# //  Questa Sim-64
+# //  Version 10.4e win64 Apr  9 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim -assertdebug -novopt tb 
+# Start time: 17:05:47 on Aug 04,2023
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.tb
+# Loading sv_std.std
+# Loading work.tb
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.rtl
+# Loading work.rtl
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.assertion
+# Loading work.assertion
+# ** Error: (vsim-3063) tb.sv(18): Port 'sec_in' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/DUT/AUT File: assertion_a.sv
+# ** Error: (vsim-3063) tb.sv(18): Port 'sec_out' not found in the connected module (5th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/DUT/AUT File: assertion_a.sv
+# Error loading design
+# End time: 17:05:49 on Aug 04,2023, Elapsed time: 0:00:02
+# Errors: 2, Warnings: 1
+vlib rt
+vlib rtl.sv assertion_a.sv tb
+# Usage: vlib -help
+#        vlib [-short | -dos | -long | -unix ]
+#             [-type (directory|flat)]
+#             [-compress | -nocompress]
+#             [-unnamed_designs <count>] [(-lock|-unlock) <design>]
+#             [-locklib|-unlocklib] <library_name>
+vlog rtl.sv assertion_a.sv tb.sv
+# QuestaSim-64 vlog 10.4e Compiler 2016.04 Apr  9 2016
+# Start time: 17:07:39 on Aug 04,2023
+# vlog -reportprogress 300 rtl.sv assertion_a.sv tb.sv 
+# -- Compiling module rtl
+# -- Compiling module assertion
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 17:07:39 on Aug 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -assertdebug -novopt tb
+# vsim -assertdebug -novopt tb 
+# Start time: 17:08:06 on Aug 04,2023
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.tb
+# Loading sv_std.std
+# Loading work.tb
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.rtl
+# Loading work.rtl
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.assertion
+# Loading work.assertion
+add wave -position end sim:/tb/DUT/*
+run -all
+#                    0data rst2 0:
+#                    0data rst_ 0:  x
+#                   50data rst_ 0:  0
+#                  470 only reset2 occur and secure = 0
+#                  485data rst2 255:
+#                  485data rst_ 255:  0
+#                  505data rst_ 255:  255
+#                  700occur and before reset2 goes high reset1 assert and deassert
+#                  715data rst2 255:
+#                  715data rst_ 255:  255
+#                  785data rst_ 255:  255
+# ** Error:                  785 FAIL rst2_deassert
+#    Time: 785 ns Started: 715 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+#                  980occur and before reset2 goes high reset1 assert and deassert
+#                 1015data rst2 255:
+#                 1015data rst_ 255:  255
+#                 1055data rst_ 255:  255
+# ** Error:                 1055 FAIL rst2_deassert
+#    Time: 1055 ns Started: 1015 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Note: $finish    : tb.sv(106)
+#    Time: 1290 ns  Iteration: 1  Instance: /tb
+# 1
+# Break in Module tb at tb.sv line 106
+vlog rtl.sv assertion_a.sv tb.sv
+# QuestaSim-64 vlog 10.4e Compiler 2016.04 Apr  9 2016
+# Start time: 17:08:59 on Aug 04,2023
+# vlog -reportprogress 300 rtl.sv assertion_a.sv tb.sv 
+# -- Compiling module rtl
+# -- Compiling module assertion
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 17:08:59 on Aug 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -assertdebug -novopt tb
+# End time: 17:09:04 on Aug 04,2023, Elapsed time: 0:00:58
+# Errors: 2, Warnings: 1
+# vsim -assertdebug -novopt tb 
+# Start time: 17:09:04 on Aug 04,2023
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.tb
+# Loading sv_std.std
+# Loading work.tb
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.rtl
+# Loading work.rtl
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.assertion
+# Loading work.assertion
+add wave -position end sim:/tb/DUT/*
+run -all
+#                    0data rst2 0:
+#                    0data rst_ 0:  x
+#                   50data rst_ 0:  0
+#                  470 only reset2 occur and secure = 0
+#                  485data rst2 255:
+#                  485data rst_ 255:  0
+#                  505data rst_ 255:  255
+#                  700occur and before reset2 goes high reset1 assert and deassert
+#                  715data rst2 255:
+#                  715data rst_ 255:  255
+#                  785data rst_ 255:  255
+# ** Error:                  785 FAIL rst2_deassert
+#    Time: 785 ns Started: 715 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+#                  980occur and before reset2 goes high reset1 assert and deassert
+#                 1015data rst2 255:
+#                 1015data rst_ 255:  255
+#                 1055data rst_ 255:  255
+# ** Error:                 1055 FAIL rst2_deassert
+#    Time: 1055 ns Started: 1015 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Note: $finish    : tb.sv(106)
+#    Time: 1290 ns  Iteration: 1  Instance: /tb
+# 1
+# Break in Module tb at tb.sv line 106
+add wave /tb/DUT/AUT/CHECK_STATUS /tb/DUT/AUT/DATA_CHECK /tb/DUT/AUT/DATA_CHECK_SEC0 /tb/DUT/AUT/DEF_CONDITION /tb/DUT/AUT/RST1_RST2_ASSERT /tb/DUT/AUT/STROBE_SIG /tb/DUT/AUT/RST1_ASSERT /tb/DUT/AUT/RST2_ASSERT /tb/DUT/AUT/RST2_DEASSERT
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+run -all
+#                    0data rst2 0:
+#                    0data rst_ 0:  x
+#                   50data rst_ 0:  0
+#                  470 only reset2 occur and secure = 0
+#                  485data rst2 255:
+#                  485data rst_ 255:  0
+#                  505data rst_ 255:  255
+#                  700occur and before reset2 goes high reset1 assert and deassert
+#                  715data rst2 255:
+#                  715data rst_ 255:  255
+#                  785data rst_ 255:  255
+# ** Error:                  785 FAIL rst2_deassert
+#    Time: 785 ns Started: 715 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+#                  980occur and before reset2 goes high reset1 assert and deassert
+#                 1015data rst2 255:
+#                 1015data rst_ 255:  255
+#                 1055data rst_ 255:  255
+# ** Error:                 1055 FAIL rst2_deassert
+#    Time: 1055 ns Started: 1015 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Note: $finish    : tb.sv(106)
+#    Time: 1290 ns  Iteration: 1  Instance: /tb
+# 1
+# Break in Module tb at tb.sv line 106
+vlog rtl.sv assertion_a.sv tb.sv
+# QuestaSim-64 vlog 10.4e Compiler 2016.04 Apr  9 2016
+# Start time: 17:17:57 on Aug 04,2023
+# vlog -reportprogress 300 rtl.sv assertion_a.sv tb.sv 
+# -- Compiling module rtl
+# -- Compiling module assertion
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 17:17:57 on Aug 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -assertdebug -novopt tb
+# End time: 17:18:08 on Aug 04,2023, Elapsed time: 0:09:04
+# Errors: 4, Warnings: 2
+# vsim -assertdebug -novopt tb 
+# Start time: 17:18:08 on Aug 04,2023
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.tb
+# Loading sv_std.std
+# Loading work.tb
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.rtl
+# Loading work.rtl
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.assertion
+# Loading work.assertion
+run -all
+#                    0data rst2 0:
+#                    0data rst_ 0:  x
+#                   50data rst_ 0:  0
+# ** Error:                  195 FAIL check_status
+#    Time: 195 ns Started: 195 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+# ** Error:                  375 FAIL def_cond
+#    Time: 375 ns Started: 285 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+# ** Error:                  415 FAIL check_status
+#    Time: 415 ns Started: 415 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+#                  470 only reset2 occur and secure = 0
+#                  485data rst2 255:
+#                  485data rst_ 255:  0
+#                  505data rst_ 255:  255
+#                  700occur and before reset2 goes high reset1 assert and deassert
+#                  715data rst2 255:
+#                  715data rst_ 255:  255
+#                  785data rst_ 255:  255
+# ** Error:                  785 FAIL rst2_deassert
+#    Time: 785 ns Started: 715 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Error:                  865 FAIL def_cond
+#    Time: 865 ns Started: 775 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+# ** Error:                  905 FAIL check_status
+#    Time: 905 ns Started: 905 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+#                  980occur and before reset2 goes high reset1 assert and deassert
+#                 1015data rst2 255:
+#                 1015data rst_ 255:  255
+#                 1055data rst_ 255:  255
+# ** Error:                 1055 FAIL rst2_deassert
+#    Time: 1055 ns Started: 1015 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Error:                 1195 FAIL def_cond
+#    Time: 1195 ns Started: 1105 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+# ** Error:                 1235 FAIL check_status
+#    Time: 1235 ns Started: 1235 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+# ** Note: $finish    : tb.sv(106)
+#    Time: 1290 ns  Iteration: 1  Instance: /tb
+# 1
+# Break in Module tb at tb.sv line 106
+add wave /tb/DUT/AUT/DATA_CHECK /tb/DUT/AUT/CHECK_STATUS /tb/DUT/AUT/RST1_RST2_ASSERT /tb/DUT/AUT/DEF_CONDITION /tb/DUT/AUT/RST2_ASSERT /tb/DUT/AUT/RST2_DEASSERT /tb/DUT/AUT/RST1_ASSERT /tb/DUT/AUT/STROBE_SIG /tb/DUT/AUT/DATA_CHECK_SEC0
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+run -all
+#                    0data rst2 0:
+#                    0data rst_ 0:  x
+#                   50data rst_ 0:  0
+# ** Error:                  195 FAIL check_status
+#    Time: 195 ns Started: 195 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+# ** Error:                  375 FAIL def_cond
+#    Time: 375 ns Started: 285 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+# ** Error:                  415 FAIL check_status
+#    Time: 415 ns Started: 415 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+#                  470 only reset2 occur and secure = 0
+#                  485data rst2 255:
+#                  485data rst_ 255:  0
+#                  505data rst_ 255:  255
+#                  700occur and before reset2 goes high reset1 assert and deassert
+#                  715data rst2 255:
+#                  715data rst_ 255:  255
+#                  785data rst_ 255:  255
+# ** Error:                  785 FAIL rst2_deassert
+#    Time: 785 ns Started: 715 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Error:                  865 FAIL def_cond
+#    Time: 865 ns Started: 775 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+# ** Error:                  905 FAIL check_status
+#    Time: 905 ns Started: 905 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+#                  980occur and before reset2 goes high reset1 assert and deassert
+#                 1015data rst2 255:
+#                 1015data rst_ 255:  255
+#                 1055data rst_ 255:  255
+# ** Error:                 1055 FAIL rst2_deassert
+#    Time: 1055 ns Started: 1015 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Error:                 1195 FAIL def_cond
+#    Time: 1195 ns Started: 1105 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+# ** Error:                 1235 FAIL check_status
+#    Time: 1235 ns Started: 1235 ns  Scope: tb.DUT.AUT.CHECK_STATUS File: assertion_a.sv Line: 67 Expr: $past(status,5)==1
+# ** Note: $finish    : tb.sv(106)
+#    Time: 1290 ns  Iteration: 1  Instance: /tb
+# 1
+# Break in Module tb at tb.sv line 106
+vlog rtl.sv assertion_a.sv tb.sv
+# QuestaSim-64 vlog 10.4e Compiler 2016.04 Apr  9 2016
+# Start time: 17:23:19 on Aug 04,2023
+# vlog -reportprogress 300 rtl.sv assertion_a.sv tb.sv 
+# -- Compiling module rtl
+# -- Compiling module assertion
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 17:23:19 on Aug 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -assertdebug -novopt tb
+# End time: 17:23:29 on Aug 04,2023, Elapsed time: 0:05:21
+# Errors: 18, Warnings: 2
+# vsim -assertdebug -novopt tb 
+# Start time: 17:23:29 on Aug 04,2023
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.tb
+# Loading sv_std.std
+# Loading work.tb
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.rtl
+# Loading work.rtl
+# Refreshing C:/Users/harekrishna ray/OneDrive/Desktop/PROJECT_SCALEDGE/project_for _assertions/work.assertion
+# Loading work.assertion
+add wave /tb/DUT/AUT/CHECK_STATUS /tb/DUT/AUT/DATA_CHECK /tb/DUT/AUT/DATA_CHECK_SEC0 /tb/DUT/AUT/DEF_CONDITION /tb/DUT/AUT/RST1_RST2_ASSERT /tb/DUT/AUT/STROBE_SIG /tb/DUT/AUT/RST1_ASSERT /tb/DUT/AUT/RST2_ASSERT /tb/DUT/AUT/RST2_DEASSERT
+run -all
+#                    0data rst2 0:
+#                    0data rst_ 0:  x
+#                   50data rst_ 0:  0
+# ** Error:                  375 FAIL def_cond
+#    Time: 375 ns Started: 285 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+#                  470 only reset2 occur and secure = 0
+#                  485data rst2 255:
+#                  485data rst_ 255:  0
+#                  505data rst_ 255:  255
+#                  700occur and before reset2 goes high reset1 assert and deassert
+#                  715data rst2 255:
+#                  715data rst_ 255:  255
+#                  785data rst_ 255:  255
+# ** Error:                  785 FAIL rst2_deassert
+#    Time: 785 ns Started: 715 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Error:                  865 FAIL def_cond
+#    Time: 865 ns Started: 775 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+#                  980occur and before reset2 goes high reset1 assert and deassert
+#                 1015data rst2 255:
+#                 1015data rst_ 255:  255
+#                 1055data rst_ 255:  255
+# ** Error:                 1055 FAIL rst2_deassert
+#    Time: 1055 ns Started: 1015 ns  Scope: tb.DUT.AUT.RST2_DEASSERT File: assertion_a.sv Line: 108 Expr: data==data_loc
+#    Local vars : data_loc = 255
+# ** Error:                 1195 FAIL def_cond
+#    Time: 1195 ns Started: 1105 ns  Scope: tb.DUT.AUT.DEF_CONDITION File: assertion_a.sv Line: 78 Expr: $fell(status)
+# ** Note: $finish    : tb.sv(106)
+#    Time: 1290 ns  Iteration: 1  Instance: /tb
+# 1
+# Break in Module tb at tb.sv line 106
+# End time: 17:28:15 on Aug 04,2023, Elapsed time: 0:04:46
+# Errors: 5, Warnings: 1
